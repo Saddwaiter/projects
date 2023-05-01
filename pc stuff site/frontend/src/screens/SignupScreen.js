@@ -89,7 +89,7 @@ export default function SignupScreen() {
         </div>
         <div className="mb-3">
           Вже маєте профіль?{' '}
-          <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
+          <Link to={`/signin?redirect=${redirect}`}>Увійдіть</Link>
         </div>
       </Form>
     </Container>
