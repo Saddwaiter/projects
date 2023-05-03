@@ -74,7 +74,7 @@ export const ratings = [
 export default function SearchScreen() {
   const navigate = useNavigate();
   const { search } = useLocation();
-  const sp = new URLSearchParams(search); // /search?category=Shirts
+  const sp = new URLSearchParams(search); 
   const category = sp.get('category') || 'all';
   const query = sp.get('query') || 'all';
   const price = sp.get('price') || 'all';
@@ -145,7 +145,7 @@ export default function SearchScreen() {
               <Row className="justify-content-between mb-3">
                 <Col md={6}>
                   <div>
-                    {countProducts === 0 ? 'No' : countProducts} Results
+                    {countProducts === 0 ? 'No' : countProducts} знайдено
                     {query !== 'all' && ' : ' + query}
                     {category !== 'all' && ' : ' + category}
                     {price !== 'all' && ' : Price ' + price}
@@ -164,17 +164,17 @@ export default function SearchScreen() {
                   </div>
                 </Col>
                 <Col className="text-end">
-                  Сортувати за{' '}
+                  Показати товари{' '}
                   <select
                     value={order}
                     onChange={(e) => {
                       navigate(getFilterUrl({ order: e.target.value }));
                     }}
                   >
-                    <option value="newest">Найновіші надходження</option>
-                    <option value="lowest">Ціна: від низької до високої</option>
-                    <option value="highest">Ціна: від високої до низької</option>
-                    <option value="toprated">Середня оцінка користувачів</option>
+                    <option value="newest">Найновіші</option>
+                    <option value="lowest">Від найдешевших</option>
+                    <option value="highest">Від найдорощих</option>
+                    <option value="toprated">З кращою оцінкою</option>
                   </select>
                 </Col>
               </Row>
