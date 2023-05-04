@@ -34,7 +34,6 @@ import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
-import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 import ResetPasswordScreen from './screens/ResetPasswordScreen';
 
 function App() {
@@ -176,10 +175,6 @@ function App() {
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route
-                path="/forget-password"
-                element={<ForgetPasswordScreen />}
-              />
-              <Route
                 path="/reset-password/:token"
                 element={<ResetPasswordScreen />}
               />
@@ -222,7 +217,6 @@ function App() {
                 element={<ShippingAddressScreen />}
               ></Route>
               <Route path="/payment" element={<PaymentMethodScreen />}></Route>
-              {/* Admin Routes */}
               <Route
                 path="/admin/dashboard"
                 element={
@@ -271,7 +265,6 @@ function App() {
                   </AdminRoute>
                 }
               ></Route>
-
               <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>

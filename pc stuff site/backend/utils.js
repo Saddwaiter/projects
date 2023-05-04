@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken';
-import mg from 'mailgun-js';
 
 export const baseUrl = () =>
   process.env.BASE_URL
