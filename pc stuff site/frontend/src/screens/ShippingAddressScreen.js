@@ -108,25 +108,6 @@ export default function ShippingAddressScreen() {
             />
           </Form.Group>
           <div className="mb-3">
-            <Button
-              id="chooseOnMap"
-              type="button"
-              variant="light"
-              onClick={() => navigate('/map')}
-            >
-              Виберіть місце на карті
-            </Button>
-            {shippingAddress.location && shippingAddress.location.lat ? (
-              <div>
-                LAT: {shippingAddress.location.lat}
-                LNG:{shippingAddress.location.lng}
-              </div>
-            ) : (
-              <div>Місцезнаходження відсутнє</div>
-            )}
-          </div>
-
-          <div className="mb-3">
             <Button variant="primary" type="submit">
               Продовжити
             </Button>

@@ -138,14 +138,7 @@ export default function SearchScreen() {
                     {query !== 'all' ||
                     category !== 'all' ||
                     rating !== 'all' ||
-                    price !== 'all' ? (
-                      <Button
-                        variant="light"
-                        onClick={() => navigate('/search')}
-                      >
-                        <i className="fas fa-times-circle"></i>
-                      </Button>
-                    ) : null}
+                    price !== 'all'}
                   </div>
                 </Col>
                 <Col className="text-end">

@@ -46,7 +46,7 @@ export default function CartScreen() {
         <Col md={8}>
           {cartItems.length === 0 ? (
             <MessageBox>
-              Кошик пустий <Link to="/">Купіть щось</Link>
+              Кошик пустий <Link to="/">Купіть щось будь ласка</Link>
             </MessageBox>
           ) : (
             <ListGroup>
